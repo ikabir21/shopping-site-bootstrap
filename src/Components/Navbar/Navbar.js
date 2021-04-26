@@ -3,34 +3,37 @@ import {
   Navbar,
   Nav,
   NavDropdown,
-  Form,
-  FormControl,
-  Button,
+  Button
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { FaRegEnvelope, FaMobileAlt, FaSearch } from 'react-icons/fa';
+import logo from "../../assets/images/logo.png";
 
-const MyNavbar = () => {
+export const MyNavbar = () => {
   return (
     <Navbar
-      style={{ padding: "1% 10%" }}
+      style={{ 
+        padding: "1% 10%", 
+        fontSize: "0.9rem"
+        }}
       bg="inherit"
       expand="lg"
       color="dark"
     >
-      <Navbar.Brand href="#home">info@techotrade.org</Navbar.Brand>
+      <Navbar.Brand style={{fontSize: "0.9rem"}} href="#"><FaRegEnvelope className="mr-1 mb-1" />info@example.org</Navbar.Brand>
       <Nav className="mr-auto">
-        <Nav.Link href="#deets">+91 85959 57412 </Nav.Link>
+        <Nav.Link href="#deets"><FaMobileAlt className="mr-1 mb-1" />+91 12345 67890 </Nav.Link>
       </Nav>
       <Nav >
-        <Nav.Link className="mr-2" href="#">Download App</Nav.Link>
-        <Nav.Link className="mr-2" href="#">Sell On Tradologie</Nav.Link>
-        <Nav.Link className="mr-2" href="#">Careers</Nav.Link>
-        <NavDropdown className="mr-2" title="Choose language">
+        <Nav.Link className="mr-3" href="#">Download App</Nav.Link>
+        <Nav.Link className="mr-3" href="#">Sell On Tradologie</Nav.Link>
+        <Nav.Link className="mr-3" href="#">Careers</Nav.Link>
+        <NavDropdown className="mr-3" title="Lang">
           <NavDropdown.Item href="#">EN</NavDropdown.Item>
           <NavDropdown.Item href="#">AR</NavDropdown.Item>
           <NavDropdown.Item href="#">FR</NavDropdown.Item>
         </NavDropdown>
-        <Button style={{padding: 0}} variant="outline-warning">
+        <Button style={{padding: "0 5px"}} variant="outline-warning">
           <NavDropdown title="signin">
           <NavDropdown.Item href="#">Login</NavDropdown.Item>
           <NavDropdown.Item href="#">Register</NavDropdown.Item>
@@ -41,4 +44,28 @@ const MyNavbar = () => {
   );
 };
 
-export default MyNavbar;
+
+export const MyNavbar2 = () => {
+  return (
+    <>
+    <Navbar bg="primary" expand="lg" style={{ padding: "0 10%", color: "#eee"}}>
+      
+      <Navbar.Brand href="#"><img style={{cursor: "pointer"}} height="50" src={logo} alt="logo"/> Example.org</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mr-auto" style={{ width: "100%", display: "flex", justifyContent: "space-between"}} fill>
+          <Nav.Link href="#">About us</Nav.Link>
+          <Nav.Link href="#">Working Methods</Nav.Link>
+          <Nav.Link href="#">Different from others</Nav.Link>
+          <Nav.Link href="#">Contact Us</Nav.Link>
+          <Nav.Link href="#">Branded Solution</Nav.Link>
+          <Nav.Link href="#">Media</Nav.Link>
+          <Button variant="success" href="#">Get A Quote</Button>
+          <Nav.Link href="#"><FaSearch/></Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
+</>
+  );
+}
+

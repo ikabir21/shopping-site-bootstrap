@@ -1,9 +1,12 @@
 import React from 'react';
-import MyNavbar from './Components/Navbar/Navbar';
+import { MyNavbar, MyNavbar2 } from './Components/Navbar/Navbar';
 
 function App() {
   return (
-    <MyNavbar style={{width: "80%"}} />
+    <>
+      <MyNavbar />
+      <MyNavbar2 />
+    </>
   );
 }
 
