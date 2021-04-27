@@ -8,12 +8,12 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaYoutube } from "re
 
 const Materials = (props) => {
   return (
-    <Container className="p-0" style={{ display: 'flex', flexWrap: "wrap"}}>
+    <div className="p-0" style={{ display: 'flex', flexWrap: "wrap"}}>
       <span className="mr-2 fw-500" >{props.title}: </span>
       {
         props.obj.map(obj => <a key={obj.key} style={{ padding: 0, marginRight: 10}} href={obj.link}>{obj.name}</a>)
       }
-    </Container>
+    </div>
   );
 };
 
@@ -30,7 +30,7 @@ const ExternalLinks = (props) => {
 
 const Footer = () => {
   return (
-    <Container className="p-0" span={3} fluid="md">
+    <Container fluid="md">
       <Row>
         <Col>
           <h5 className="mt-2 fw-600">Products: </h5>
@@ -49,12 +49,12 @@ const Footer = () => {
       <Row className="mt-3">
         <Col>
           <h5 className="fw-600">Super E Factory Depot Pvt. Ltd.</h5>
-          <Container className="p-0">D-160, Ground Floor Sector 63, Noida, Uttar Pradesh - 201309 (India)
- Phone No: +91 85959 57412 +91-120 - 4148741, +91-120 - 4148742</Container>
+          <div className="p-0">D-160, Ground Floor Sector 63, Noida, Uttar Pradesh - 201309 (India)
+ Phone No: +91 85959 57412 +91-120 - 4148741, +91-120 - 4148742</div>
         </Col>
         <Col>
           <h5 className="fw-600">Super E Factory Depot Pvt. Ltd.</h5>
-          <Container className="p-0">Unit No:AG-PF-207 AG Tower' Plot No:JLT-PH1-I1A' Jumeirah Lakes Tower, Dubai, United Arab Emirates.</Container>
+          <div className="p-0">Unit No:AG-PF-207 AG Tower' Plot No:JLT-PH1-I1A' Jumeirah Lakes Tower, Dubai, United Arab Emirates.</div>
         </Col>
         <Col>
           <h5 className="fw-600">Need Help</h5> 
@@ -70,7 +70,7 @@ const Footer = () => {
       <Row>
         <Col>
           <h5 className="fw-600">Payment</h5>
-          <img src={payment} alt="payment"/>
+          <img width="100%" src={payment} alt="payment"/>
         </Col>
         <Col>
           <h5>Follow Us On</h5>
