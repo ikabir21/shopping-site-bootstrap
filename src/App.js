@@ -4,15 +4,20 @@ import { MyNavbar, MyNavbar2 } from './Components/Navbar/Navbar';
 import "./App.css";
 import Home from './Components/Home/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Contact from './Components/Contact/Contact';
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 function App() {
   return (
-    <>
+    <Router>
       <MyNavbar />
       <MyNavbar2 />
-      <Home />
+      <Switch>
+        <Route path="/" exact component={Home}></Route>
+        <Route path="/contact" component={Contact}></Route>
+      </Switch>
       <Footer />
-    </>
+    </Router>
   );
 }
 

@@ -5,8 +5,7 @@ import {
   NavDropdown,
   Button
 } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { FaRegEnvelope, FaMobileAlt, FaSearch } from 'react-icons/fa';
+import { FaRegEnvelope, FaMobileAlt, FaSearch, FaPhoneAlt } from 'react-icons/fa';
 import logo from "../../assets/images/logo.png";
 
 export const MyNavbar = () => {
@@ -22,10 +21,10 @@ export const MyNavbar = () => {
     >
       <Navbar.Brand style={{fontSize: "0.9rem"}} href="#"><FaRegEnvelope className="mr-1 mb-1" />info@example.org</Navbar.Brand>
       <Nav className="mr-auto">
-        <Nav.Link href="#deets"><FaMobileAlt className="mr-1 mb-1" />+91 12345 67890 </Nav.Link>
+        <Nav.Link href="#deets"><FaPhoneAlt className="mr-1 mb-1" />+91 12345 67890 </Nav.Link>
       </Nav>
       <Nav >
-        <Nav.Link className="mr-3" href="#">Download App</Nav.Link>
+        <Nav.Link className="mr-3" href="#"><FaMobileAlt className="mr-1 mb-1" />Download App</Nav.Link>
         <Nav.Link className="mr-3" href="#">Sell On Tradologie</Nav.Link>
         <Nav.Link className="mr-3" href="#">Careers</Nav.Link>
         <NavDropdown className="mr-3" title="Lang">

@@ -235,7 +235,7 @@ const Home = () => {
       </Row>
       <Row>
         <Card style={{ width: "100%" }} className="m-3 text-center">
-          <Card.Body>
+          <Card.Body className="pl-5 pr-5">
             <h5 className="fw-600">What Is Tradologie?</h5>
             <h6 className="pl-3 pr-3 mt-3">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -291,23 +291,23 @@ const Home = () => {
           </Col>
         </Col>
         <Col lg={8}>
-          <h3 className="fw-600 m-3">HOW WE HELPS SUPPLIERS</h3>
-          <Col>
+          <h3 className="fw-600 m-3 text-uppercase">How We HELPS SUPPLIERS</h3>
+          <Container>
             <Row>
               <Col className="mt-1" lg={3}>
-                <img src="https://picsum.photos/150" alt="" />
+                <img width="100%" src="https://picsum.photos/150" alt="" />
               </Col>
               <Col className="mt-1" lg={3}>
-                <img src="https://picsum.photos/150" alt="" />
+                <img width="100%" src="https://picsum.photos/150" alt="" />
               </Col>
               <Col className="mt-1" lg={3}>
-                <img src="https://picsum.photos/150" alt="" />
+                <img width="100%" src="https://picsum.photos/150" alt="" />
               </Col>
               <Col className="mt-1" lg={3}>
-                <img src="https://picsum.photos/150" alt="" />
+                <img width="100%" src="https://picsum.photos/150" alt="" />
               </Col>
             </Row>
-          </Col>
+          </Container>
         </Col>
       </Row>
       <Row>
