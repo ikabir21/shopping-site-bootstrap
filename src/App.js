@@ -6,6 +6,7 @@ import Home from './Components/Home/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Contact from './Components/Contact/Contact';
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import Working from './Components/Working/Working';
 
 function App() {
   return (
@@ -15,8 +16,8 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home}></Route>
         <Route path="/contact" component={Contact}></Route>
+        <Route path="/Working" component={Working}></Route>
       </Switch>
-      <Footer />
     </Router>
   );
 }

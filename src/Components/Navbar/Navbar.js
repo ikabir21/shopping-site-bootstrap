@@ -11,9 +11,12 @@ import logo from "../../assets/images/logo.png";
 export const MyNavbar = () => {
   return (
     <Navbar
+      sticky="top"
       style={{ 
-        padding: "1% 10%", 
-        fontSize: "0.9rem"
+        padding: "0.5% 10%", 
+        fontSize: "0.9rem",
+        zIndex: "20",
+        background: "#fff"
         }}
       bg="inherit"
       expand="lg"
@@ -47,20 +50,19 @@ export const MyNavbar = () => {
 export const MyNavbar2 = () => {
   return (
     <>
-    <Navbar bg="primary" expand="lg" style={{ padding: "0 10%", color: "#eee"}}>
-      
-      <Navbar.Brand href="#"><img style={{cursor: "pointer"}} height="50" src={logo} alt="logo"/> Example.org</Navbar.Brand>
+    <Navbar sticky="top" bg="primary" expand="lg" style={{ padding: "0 10%", color: "#eee"}}>
+      <Navbar.Brand className="linkColor" href="/"><img style={{cursor: "pointer"}} height="50" src={logo} alt="logo"/> Example.org</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto" style={{ width: "100%", display: "flex", justifyContent: "space-between"}} fill>
-          <Nav.Link href="#">About us</Nav.Link>
-          <Nav.Link href="#">Working Methods</Nav.Link>
-          <Nav.Link href="#">Different from others</Nav.Link>
-          <Nav.Link href="#">Contact Us</Nav.Link>
-          <Nav.Link href="#">Branded Solution</Nav.Link>
-          <Nav.Link href="#">Media</Nav.Link>
-          <Button variant="success" href="#">Get A Quote</Button>
-          <Nav.Link href="#"><FaSearch/></Nav.Link>
+          <Nav.Link className="linkColor" href="#">About us</Nav.Link>
+          <Nav.Link className="linkColor" href="/working">Working Methods</Nav.Link>
+          <Nav.Link className="linkColor" href="#">Different from others</Nav.Link>
+          <Nav.Link className="linkColor" href="/contact">Contact Us</Nav.Link>
+          <Nav.Link className="linkColor" href="#">Branded Solution</Nav.Link>
+          <Nav.Link className="linkColor" href="#">Media</Nav.Link>
+          <Button className="linkColor" variant="success" href="#">Get A Quote</Button>
+          <Nav.Link className="linkColor" href="#"><FaSearch/></Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

@@ -11,6 +11,9 @@ a{
 a:hover {
   color: #222 !important;
 }
+.linkColor{
+  color: #fff !important;
+}
 .bold{
   font-weight: bold;
 }

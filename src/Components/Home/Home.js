@@ -8,7 +8,6 @@ import {
   Dropdown,
   Button,
   ListGroup,
-  icon1icon2,
   ListGroupItem,
 } from "react-bootstrap";
 import qrCode from "../../assets/images/qrCode.png";
@@ -19,10 +18,40 @@ import icon1 from "../../assets/images/icon1.png";
 import icon2 from "../../assets/images/icon2.png";
 import icon3 from "../../assets/images/icon3.png";
 import icon4 from "../../assets/images/icon4.png";
+import icon5 from "../../assets/images/icon5.png";
+import icon6 from "../../assets/images/icon6.png";
+import icon7 from "../../assets/images/icon7.png";
+import icon8 from "../../assets/images/icon8.png";
+import icon9 from "../../assets/images/icon9.png";
+import icon10 from "../../assets/images/icon10.png";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import Footer from "../Footer/Footer";
+
+
+const Cards = (props) => {
+  return(
+    <>
+      <h4 className="fw-600 mb-3">Technotrade procurement solution</h4>
+    <Row className="pt-3 pb-5" style={{ background: "#fff"}}>
+      {
+        props.obj.map(obj => (
+          <Col className="mt-3 mb-3" md lg={2}>
+            <div className="text-center p-2" style={{width: "100%", background: "#00adb5", color: "white"}}><h6 className="bold">STEP<span className="ml-3">{obj.heading}</span></h6></div>
+            <Card className="p-4 text-center" key={obj.key} style={{borderBottomLeftRadius: "40px"}}>
+              <img className="ml-auto mr-auto" width="40px" src={obj.link} alt="{props.obj.icon}"/>
+              <h6 className="mt-3">{obj.description}</h6>
+            </Card>
+          </Col>
+        ))
+      }
+    </Row>
+    </>
+  )
+}
 
 const Home = () => {
   return (
+    <>
     <Container className="mt-4">
       <Row>
         <Col md lg={3}>
@@ -380,8 +409,21 @@ const Home = () => {
           </Row>
         </Container>
       </Row>
+        <Cards obj={cardInfo} />
     </Container>
+    <Footer />
+    </>
   );
 };
+
+const cardInfo = [
+  {heading: 1, link: icon5, description: "post your enquiry"},
+  {heading: 2, link: icon6, description: "post your enquiry"},
+  {heading: 3, link: icon7, description: "post your enquiry"},
+  {heading: 4, link: icon8, description: "post your enquiry"},
+  {heading: 5, link: icon2, description: "post your enquiry"},
+  {heading: 6, link: icon9, description: "post your enquiry"},
+  {heading: 7, link: icon10, description: "post your enquiry"},
+]
 
 export default Home;
