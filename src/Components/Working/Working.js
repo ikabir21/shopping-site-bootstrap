@@ -9,7 +9,7 @@ const Cards = (props) => {
       {
         props.obj.map(obj => {
           return(
-            <Row className="mt-3 p-5 mr-5">
+            <Row style={{display: "flex", flexDirection: "row", justifyContent: "space-evenly"}} className="mt-3 mr-5">
               {
                 obj.isLeft  ? (
                   <>
@@ -18,14 +18,14 @@ const Cards = (props) => {
                   <p style={{width: "100%", height: "100px", background: "#acb345"}}></p>
                 </div>
               </Col>
-              <Col lg={5} md className="text-center ml-5" style={{padding: "0 5rem", borderLeft: "3px solid gray"}}>
+              <Col lg={5} md className="text-center ml-5" style={{padding: "0 3rem", borderLeft: "3px solid gray"}}>
                 <h3 className="fw-600">{obj.heading}</h3>
                 <h6 className="mt-3 text-left">{obj.description}</h6>
               </Col>
               </>
                 ) : (
                   <>
-                  <Col lg={5} md className="text-center mr-5" style={{padding: "0 5rem", borderRight: "3px solid gray"}}>
+                  <Col lg={5} md className="text-center mr-5" style={{padding: "0 3rem", borderRight: "3px solid gray"}}>
                 <h3 className="fw-600">{obj.heading}</h3>
                 <h6 className="mt-3 text-left">{obj.description}</h6>
               </Col>
