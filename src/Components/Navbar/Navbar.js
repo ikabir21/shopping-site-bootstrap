@@ -26,7 +26,7 @@ export const MyNavbar = () => {
       <Nav className="mr-auto">
         <Nav.Link href="#deets"><FaPhoneAlt className="mr-1 mb-1" />+91 12345 67890 </Nav.Link>
       </Nav>
-      <Nav >
+      <Nav>
         <Nav.Link className="mr-3" href="#"><FaMobileAlt className="mr-1 mb-1" />Download App</Nav.Link>
         <Nav.Link className="mr-3" href="#">Sell On Tradologie</Nav.Link>
         <Nav.Link className="mr-3" href="#">Careers</Nav.Link>
