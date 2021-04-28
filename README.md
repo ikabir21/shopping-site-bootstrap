@@ -1,1 +1,1 @@
-[Live Preview](https://admiring-swanson-eb0c5f.netlify.app/)
+[Live Preview](https://shopping-site-bootstrap.netlify.app/)
