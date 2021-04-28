@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Footer from "../Footer/Footer";
 import { workingData } from "./workingData";
+import "./styles.css";
 
 const Cards = (props) => {
   return(
@@ -13,25 +14,27 @@ const Cards = (props) => {
               {
                 obj.isLeft  ? (
                   <>
-                  <Col lg={5} md style={{borderRight: "3px solid gray"}}>
-                <div>
-                  <p style={{width: "100%", height: "100px", background: "#acb345"}}></p>
+                  <Col className="img-container1 p-0" lg={5} md >
+                <div className="img-div img-div1 pl-3">
+                  <p className="step">Step{obj.step}</p>
+                  <img className="img" src="https://picsum.photos/300/300" alt=""/>
                 </div>
               </Col>
-              <Col lg={5} md className="text-center ml-5" style={{padding: "0 3rem", borderLeft: "3px solid gray"}}>
+              <Col lg={5} md className="text-center ml-5 text-container1">
                 <h3 className="fw-600">{obj.heading}</h3>
                 <h6 className="mt-3 text-left">{obj.description}</h6>
               </Col>
               </>
                 ) : (
                   <>
-                  <Col lg={5} md className="text-center mr-5" style={{padding: "0 3rem", borderRight: "3px solid gray"}}>
+                  <Col lg={5} md className="text-container2 text-center mr-5 pr-4">
                 <h3 className="fw-600">{obj.heading}</h3>
                 <h6 className="mt-3 text-left">{obj.description}</h6>
               </Col>
-                  <Col lg={5} md style={{borderLeft: "3px solid gray"}}>
-                <div>
-                  <p style={{width: "100%", height: "100px", background: "#acb345"}}></p>
+                  <Col className="img-container2 p-0" lg={5} md >
+                <div className="img-div img-div2">
+                  <img className="img" src="https://picsum.photos/300/300" alt=""/>
+                  <p className="step2 step">Step{obj.step}</p>
                 </div>
               </Col>
               </>
