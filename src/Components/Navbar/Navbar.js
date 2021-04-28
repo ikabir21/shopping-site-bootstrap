@@ -5,6 +5,7 @@ import {
   NavDropdown,
   Button
 } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { FaRegEnvelope, FaMobileAlt, FaSearch, FaPhoneAlt } from 'react-icons/fa';
 import logo from "../../assets/images/logo.png";
 
@@ -56,9 +57,9 @@ export const MyNavbar2 = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto" style={{ width: "100%", display: "flex", justifyContent: "space-between"}} fill>
           <Nav.Link className="linkColor" href="#">About us</Nav.Link>
-          <Nav.Link className="linkColor" href="/working">Working Methods</Nav.Link>
+          <Nav.Link className="linkColor"><Link className="linkColor" to="/working">Working Methods</Link></Nav.Link>
           <Nav.Link className="linkColor" href="#">Different from others</Nav.Link>
-          <Nav.Link className="linkColor" href="/contact">Contact Us</Nav.Link>
+          <Nav.Link className="linkColor"><Link className="linkColor" to="/contact">Contact Us</Link></Nav.Link>
           <Nav.Link className="linkColor" href="#">Branded Solution</Nav.Link>
           <Nav.Link className="linkColor" href="#">Media</Nav.Link>
           <Button className="linkColor" variant="success" href="#">Get A Quote</Button>
