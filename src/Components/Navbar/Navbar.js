@@ -50,7 +50,7 @@ export const MyNavbar = () => {
 export const MyNavbar2 = () => {
   return (
     <>
-    <Navbar sticky="top" bg="primary" expand="lg" style={{ padding: "0 10%", color: "#eee"}}>
+    <Navbar bg="primary" expand="lg" style={{ padding: "0 10%", color: "#eee"}}>
       <Navbar.Brand className="linkColor" href="/"><img style={{cursor: "pointer"}} height="50" src={logo} alt="logo"/> Example.org</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">

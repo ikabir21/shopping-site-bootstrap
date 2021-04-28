@@ -22,14 +22,14 @@ const Cards = (props) => {
               </Col>
               <Col lg={5} md className="text-center ml-5 text-container1">
                 <h3 className="fw-600">{obj.heading}</h3>
-                <h6 className="mt-3 text-left">{obj.description}</h6>
+                <h6 className="mt-3 text-left pl-4">{obj.description}</h6>
               </Col>
               </>
                 ) : (
                   <>
                   <Col lg={5} md className="text-container2 text-center mr-5 pr-4">
                 <h3 className="fw-600">{obj.heading}</h3>
-                <h6 className="mt-3 text-left">{obj.description}</h6>
+                <h6 className="mt-3 text-left pr-3">{obj.description}</h6>
               </Col>
                   <Col className="img-container2 p-0" lg={5} md >
                 <div className="img-div img-div2">
